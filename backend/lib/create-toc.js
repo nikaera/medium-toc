@@ -15,6 +15,7 @@ function createTOC(uri) {
         .each((_, elem) => {
           const title = elem.children[0].data;
           const headingCode = elem.attribs.id;
+          const tagNum = parseInt(elem.name.slice(-1));
 
           if (!headingCode) {
             return;
@@ -23,6 +24,7 @@ function createTOC(uri) {
           const link = `https://medium.com/p/${articleId}#${headingCode}`;
 
           results.push({
+            tagNum,
             title,
             headingCode,
             link

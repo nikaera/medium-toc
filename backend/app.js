@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
     })
   })
   .catch(error => {
+    console.error(error)
     res.sendStatus(502)
   })
   

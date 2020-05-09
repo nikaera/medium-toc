@@ -1,5 +1,6 @@
 import React from 'react'
-import TOC from "../toc/TOC";
+// import TOC from "../toc/TOC";
+import TOC from "../toc/MultiLevelTOC";
 import UrlForm from "../form/Form";
 
 const Display = ({results, handleSubmit}) => {
