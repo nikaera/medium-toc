@@ -6,7 +6,7 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-  const url = 'https://' + req.query.url
+  const url = 'https://' + encodeURI(req.query.url)
   createTOC(url)
   .then(results => {
     res.send({
