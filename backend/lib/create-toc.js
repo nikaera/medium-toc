@@ -1,8 +1,9 @@
-const rp = require("request-promise");
+const fetch = require('node-fetch');
 const cheerio = require("cheerio");
 
 function createTOC(uri) {
-  return rp(uri)
+  return fetch(uri)
+    .then(res => res.text())
     .then(body => cheerio.load(body))
     .then($ => {
       // Get The Article ID

@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
   .catch(error => {
     res.sendStatus(502)
   })
-  
 })
 
 app.listen(process.env.PORT || 8080, () => {
